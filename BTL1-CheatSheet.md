@@ -249,16 +249,16 @@ index="botsv1" src="127.0.0.1" dst="X.X.X.X"
 Most common Wireshark filters:
 
 ```md
-Filter by source IP: `ip.src == 10.251.96.4`
-Filter traffic by destination IP: `ip.dst == 192.168.1.100`
-Filter by specific port: `tcp.port == 80`
-Filter by protocol: `dns`
-Search for HTTP GET requests: `http.request.method == "GET"`
-Filter by files uploaded or downloaded to a page: `http.request.method==POST`
-Filter by tools: `ip.dst == 10.251.96.5 && http.user_agent`
-Filter by suspicious payloads or strings: `http contains "cmd"`
-Filter by specific file extensions or types in HTTP traffic: `http.request.uri contains ".exe"`
-Filter by failed login attempts via HTTP: `http.request.method == "POST" && http.host contains "login"`
+Filter by source IP: ip.src == 10.251.96.4
+Filter traffic by destination IP: ip.dst == 192.168.1.100
+Filter by specific port: tcp.port == 80
+Filter by protocol: dns
+Search for HTTP GET requests: http.request.method == "GET"
+Filter by files uploaded or downloaded to a page: http.request.method==POST
+Filter by tools: ip.dst == 10.251.96.5 && http.user_agent
+Filter by suspicious payloads or strings: http contains "cmd"
+Filter by specific file extensions or types in HTTP traffic: http.request.uri contains ".exe"
+Filter by failed login attempts via HTTP: http.request.method == "POST" && http.host contains "login"
 ```
 
 2. **CMD** : Command prompt can be used to view the valuable information,
