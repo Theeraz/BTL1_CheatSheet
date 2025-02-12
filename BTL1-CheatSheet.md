@@ -1,5 +1,3 @@
-*These notes will come handy in exam.*
-
 ## SOC Fundamentals
 
 List of common ports.
