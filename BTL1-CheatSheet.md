@@ -285,6 +285,17 @@ index=* sourcetype=suricata event_type=alert | stats count by severity
 index=* sourcetype=fortigate_utm level=alert | stats count by severity
 ```
 
+IMPORTANT NOTE
+
+- You must escape / with \ if required in the given context.
+- Do not escape \ itself, unless necessary for another syntax.
+
+```md
+\/var\/log\/system\.log
+```
+
+Here, the / is escaped (\/), and the . is also escaped (\.) to be interpreted literally.
+
 
 ## Incident Response
 
