@@ -240,6 +240,52 @@ To search for a destination IP (dst) address that this source IP address made a 
 index="botsv1" src="127.0.0.1" dst="X.X.X.X"
 ```
 
+Query to get the count of whatever we need,
+
+```md
+index="botsv1" | stats count by signature
+```
+
+Query to get the HTTP status code,
+
+```md
+index="botsv1" status=200
+```
+
+Query to get the type of event,
+
+```md
+index="botsv1" event_type=alert
+```
+
+Query to get the sysmon source,
+
+```md
+index="botsv1" event_type=alert
+```
+
+Query for the Fortigate Alerts counter,
+
+```md
+index=* sourcetype=fortigate_utm level=alert | stats count by attack 
+```
+
+Query to find the version of the scanning tool,
+
+```md
+index=* sourcetype=fortigate_utm level=alert   attack="Acunetix.Web.Vulnerability.Scanner" ref="http://www.fortinet.com/ids/VID39769"
+
+(Then we check the link to fortinet or whatever page is. If we don't find the version there, we should check in other logs, like Suricata and in the search field we write some reference, in this case Acunetix)
+```
+
+Query that gets the count of events based on each severity rating in SURICATA and FORTIGATE
+```md
+index=* sourcetype=suricata event_type=alert | stats count by severity
+
+index=* sourcetype=fortigate_utm level=alert | stats count by severity
+```
+
+
 ## Incident Response
 
 1. **Network Analysis** - use Wireshark to import .pcap, .pcapng files.
