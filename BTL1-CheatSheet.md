@@ -261,7 +261,7 @@ index="botsv1" event_type=alert
 Query to get the sysmon source,
 
 ```md
-index="botsv1" event_type=alert
+index="botsv1" source=="XmlWinEventLog"
 ```
 
 Query for the Fortigate Alerts counter,
