@@ -447,7 +447,8 @@ DeepBlue will point at the local system's Security or System event logs directly
 ./DeepBlue.ps1 -log security
 ./DeepBlue.ps1 -log system
 
-IMPORTANT: This would be the commans in case the logs are in the same directory as DeepBlueCLi (exactly the same directory). For example, if the logs are in a previous directory the command would be:
+IMPORTANT: This would be the commans in case the logs are in the same directory as DeepBlueCLi (exactly the same directory).
+For example, if the logs are in a previous directory the command would be:
 
 ./DeepBlue.ps1 ..\Logname1
 
