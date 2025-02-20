@@ -314,6 +314,8 @@ Filter by tools: ip.dst == 10.251.96.5 && http.user_agent
 Filter by suspicious payloads or strings: http contains "cmd"
 Filter by specific file extensions or types in HTTP traffic: http.request.uri contains ".exe"
 Filter by failed login attempts via HTTP: http.request.method == "POST" && http.host contains "login"
+Displays TCP packets with a window size of 8000 bytes or over: tcp.window_size_value >= 8000
+Exclude the type of packets you decide (tcp in the next example): not ftp / !udp
 ```
 
 2. **CMD** : Command prompt can be used to view the valuable information,
@@ -345,13 +347,13 @@ net users
 List all users that are in the administrators user group,
 
 ```cmd
-net localgroup administrators
+net localgroup administrators (we can use just "net localgroup" to see a list of all groups)
 ```
 
 List all users in RDP group,
 
 ```cmd
-net localgroup "Remote Desktop Users"
+net localgroup "Remote Desktop Users" (quotes are for groups that include spaces)
 ```
 
 List all services and detailed information about each one,
