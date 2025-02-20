@@ -368,6 +368,12 @@ List open ports on a system, which could show the presence of a backdoor,
 netstat -ab
 ```
 
+Export a tasklist into a txt,
+
+```cmd
+tasklist > tasklist.txt
+```
+
 3. **Powershell** - Can also be used often retrieve much more information.
 
 These commands will get network-related information from the system,
