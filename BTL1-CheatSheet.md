@@ -113,8 +113,8 @@ C:\Windows\Prefetch
 - **Jumplist Files** - These files can be found at
 
 ```md
-C:\Users\% USERNAME%\AppData\ Roaming\Microsoft\Windows\Recent\AutomaticDestinations
-C:\Users\%USERNAME%\AppData\ Roaming\Microsoft\Windows\Recent\CustomDestinations
+C:\Users\% USERNAME%\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations
+C:\Users\%USERNAME%\AppData\Roaming\Microsoft\Windows\Recent\CustomDestinations
 ```
 
 - **Logon Events**
