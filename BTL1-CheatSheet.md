@@ -307,6 +307,7 @@ Most common Wireshark filters:
 Filter by source IP: ip.src == 10.251.96.4
 Filter traffic by destination IP: ip.dst == 192.168.1.100
 Filter by specific port: tcp.port == 80
+Filter to find an specific info inside of a packet: frame contains <specific info>
 Filter by protocol: dns
 Filter by protocol + string (api in this case): dns contains api
 Search for HTTP GET requests: http.request.method == "GET"
