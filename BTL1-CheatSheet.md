@@ -246,6 +246,48 @@ Query to get the count of whatever we need,
 index="botsv1" | stats count by signature
 ```
 
+Query to show all the events containing the term Powershell,
+
+```md
+index=windowslogs | search Powershell
+```
+
+Query to display the top 7 Image ( representing Processes) captured,
+
+```md
+index=windowslogs | top limit=7 Image
+```
+
+Query that does the opposite of top command as it returns the least frequent values or bottom 10 results,
+
+```md
+index=windowslogs | rare limit=7 Image
+```
+
+Query to highlight the three mentioned fields in the RAW logs,
+
+```md
+index=windowslogs | highlight User, host, EventID, Image
+```
+
+Query to  transform the data into tables or visualizations,
+
+```md
+index=windowslogs | chart count by User
+```
+
+Query to add or remove mentioned fields from the search results,
+
+```md
+index=windowslogs | fields + host + User + SourceIp
+```
+
+Query to create a table with three columns selected and ignore all the remaining columns from the display,
+
+```md
+index=windowslogs | table EventID Hostname SourceName
+```
+
 Query to get the HTTP status code,
 
 ```md
@@ -277,6 +319,7 @@ index=* sourcetype=fortigate_utm level=alert   attack="Acunetix.Web.Vulnerabilit
 
 (Then we check the link to fortinet or whatever page is. If we don't find the version there, we should check in other logs, like Suricata and in the search field we write some reference, in this case Acunetix)
 ```
+
 
 Query that gets the count of events based on each severity rating in SURICATA and FORTIGATE
 ```md
